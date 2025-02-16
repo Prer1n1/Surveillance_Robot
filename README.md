@@ -1,0 +1,3 @@
+
+This project focuses on deploying an advanced mini rover to explore both unexplored and inhabited areas, gathering real-time environmental data. Equipped with object detection, motion detection, environmental analysis, and high-resolution imaging, the rover enables comprehensive monitoring of diverse environments.
+By leveraging machine learning algorithms, the system processes and analyzes collected data autonomously, ensuring accurate insights for various applications. This enhances scientific research, disaster response, and environmental conservation by providing real-time, reliable information.It involves real tiem data collection,object and motion detection, image capturing and environmental analysis.

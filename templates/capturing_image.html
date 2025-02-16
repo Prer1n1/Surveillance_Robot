@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturing Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #222; 
+            color: #fff; /* White text color */
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners for the video player */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Capturing Image</h1>
+
+    <img src="{{ url_for('video_feed') }}" alt=" " />
+    <button class="capture-button" onclick="captureImage()">Capture Image</button>
+
+    <script>
+        function captureImage() {
+            fetch('/capture_image')
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    alert(data); // Display message indicating image capture status
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        }
+    </script>  
+</body>
+</html>

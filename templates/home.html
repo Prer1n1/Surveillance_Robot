@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222; 
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        }
+        h1 {
+            text-align: left;
+            color: #fff;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px auto;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GUARDIAN  DASHBOARD</h1>
+        <button onclick="startstreaming()">Start Video Streaming</button>
+        <button onclick="startObjectDetection()">Object Detection</button>
+        <button onclick="startMotionDetection()">Motion Detection</button>
+	    <button onclick="startenvanalysis()">Environmental Analysis</button>
+	    <button class="capture-button" onclick="CapturingImagePage()">Capture Image</button>
+      	
+    </div>
+    
+    <script>
+        function startstreaming() {
+            window.open("/index", "_blank");
+        }
+
+        function startObjectDetection() {
+            window.open("/object_detection", "_blank");
+        }
+
+        function startMotionDetection() {
+            window.open("/motion_detection", "_blank");
+        }
+        /*
+	    function startObjectTracking() {
+	        window.open("/object_tracking", "_blank");
+	    }*/
+
+        function startenvanalysis() {
+            window.open("/env_analysis", "_blank");
+        }
+	    function CapturingImagePage() {
+    	    window.open("/capturing_image_feed", "_blank");
+	    }
+	
+	
+	
+    </script>
+</body>
+</html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>                    GUARDIAN                     </h1>
+    <button onclick="startstreaming()">Start Video Streaming</button>
+    <button onclick="startObjectDetection()">Object Detection</button>
+    <button onclick="startMotionDetection()"> Motion Detection </button>
+    <button onclick="startenvanalysis()"> Environmental Analysis </button>
+    
+    <script>
+    	function startstreaming() {
+               	window.open("/index", "_blank");
+    	}
+
+    	function startObjectDetection() {
+               	window.open("/object_detection", "_blank");
+    	}
+
+    	function startMotionDetection() {
+		window.open("/motion_detection", "_blank");
+        
+    	}
+	function startenvanalysis() {
+		window.open("/env_analysis", "_blank");
+
+	}
+	
+    </script>
+
+ 
+</body>
+</html>
+
+
+-->

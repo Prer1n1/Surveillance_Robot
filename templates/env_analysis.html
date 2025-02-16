@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Analysis</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #222; 
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+        }
+        .sensor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .sensor-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .sensor-box {
+            width: 200px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            text-align: center;
+        }
+        .sensor-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .sensor-label {
+            font-size: 18px;
+            color: #666;
+        }
+        .sensor-value {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Environmental Analysis</h1>
+    <div class="sensor-container">
+        <div class="sensor-row">
+            <div class="sensor-box">
+                <!--<i class="fas fa-wind sensor-icon"></i> -->
+                <p class="sensor-label">Methane Gas Level</p>
+                <p class="sensor-value">{{ methane_gas_level }}</p>
+            </div>
+            <div class="sensor-box">
+                <!--<i class="fas fa-fire sensor-icon"></i> -->
+                <p class="sensor-label">Flame Detection</p>
+                <p class="sensor-value">{{ flame_detection }}</p>
+            </div>
+            <div class="sensor-box">
+                <!--<i class="fas fa-magnet sensor-icon"></i> -->
+                <p class="sensor-label">Magnetic Field</p>
+                <p class="sensor-value">{{ magnetic_field }}</p>
+            </div>
+        </div>
+        <div class="sensor-row">
+            <div class="sensor-box">
+               <!--<i class="fas fa-thermometer-half sensor-icon"></i> -->
+                <p class="sensor-label">Temperature</p>
+                <p class="sensor-value">{{ temperature }}</p>
+            </div>
+            <div class="sensor-box">
+             <!-- <i class="fas fa-tint sensor-icon"></i>  -->
+                <p class="sensor-label">Humidity</p>
+                <p class="sensor-value">{{ humidity }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

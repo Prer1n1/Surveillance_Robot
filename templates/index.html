@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Video Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #222; 
+            color: #fff; /* White text color */
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+	
+    </style>
+</head>
+<body>
+    <h1>Live Video Streaming</h1>
+    <img src="{{ url_for('video_feed') }}" alt="Live Video Feed" />
+    <button onclick="move('left')">Left</button>
+    <button onclick="move('right')">Right</button>
+    <button onclick="move('up')">Up</button>
+    <button onclick="move('down')">Down</button>
+
+    <script>
+        function move(direction) {
+            fetch('/' + direction)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network reponse was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('There was an error', error);
+                })
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan Tilt Control</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <h2>Pan Control</h2>
+            <button onclick="pan('left')">Pan Left</button>
+            <button onclick="pan('middle')">Pan Middle</button>
+            <button onclick="pan('right')">Pan Right</button>
+            <h2>Tilt Control</h2>
+            <button onclick="tilt('up')">Tilt Up</button>
+            <button onclick="tilt('middle')">Tilt Middle</button>
+            <button onclick="tilt('down')">Tilt Down</button>
+        </div>
+    </div>
+
+    <script>
+        function pan(direction) {
+            fetch(`/pan/${direction}`);
+        }
+
+        function tilt(direction) {
+            fetch(`/tilt/${direction}`);
+        }
+    </script>
+</body>
+</html>
+
+-->
+
+
+
+
+
